@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
+
+class Contact extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+    protected $data;
+
+    public function __construct($data)
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this->from(settings()['email'], $this->data['title'] )
+            ->view('emails.confirm_code')
+            ->subject($this->data['mailSubject'])
+            ->with([
+                'headingTitle' => $this->data['headingTitle'],
+                'title' => $this->data['title'],
+                'message' => $this->data['message'],
+                'name' => $this->data['name'],
+                'email' => $this->data['email'],
+            ]);
+    }
+}
