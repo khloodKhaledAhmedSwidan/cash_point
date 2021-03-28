@@ -32,9 +32,9 @@ class AuthController extends Controller
 
         $code = mt_rand(1000, 9999);
             $jsonObj = array(
-            'mobile' => 'salamat',
-            'password' => 'a102030',
-            'sender'=>'salamat',
+            'mobile' => '',
+            'password' => '',
+            'sender'=>'',
             'numbers' => $request->phone_number,
             'msg'=>'كود التأكيد الخاص بك في سلامات هو :'.$code,
 
@@ -125,9 +125,9 @@ class AuthController extends Controller
 
 
     $jsonObj = array(
-            'mobile' => 'salamat',
-            'password' => 'a102030',
-            'sender'=>'salamat',
+            'mobile' => '',
+            'password' => '',
+            'sender'=>'',
             'numbers' => $request->phone_number,
             'msg'=>'كود التأكيد الخاص بك في سلامات هو :'.$code,
 
@@ -470,9 +470,9 @@ class AuthController extends Controller
 
 
                    $jsonObj = array(
-            'mobile' => 'sawaq',
-            'password' => 'a102030',
-            'sender'=>'salamat',
+            'mobile' => '',
+            'password' => '',
+            'sender'=>'',
             'numbers' => $request->phone_number,
             'msg'=>'كود التأكيد الخاص بك في سلامات هو :'.$code,
 
