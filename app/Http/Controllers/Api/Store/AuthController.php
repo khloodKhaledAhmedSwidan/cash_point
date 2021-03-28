@@ -358,9 +358,9 @@ if($request->type == 1){
 
 
        $jsonObj = array(
-           'mobile' => 'tqnee.com.sa',
-           'password' => '589935sa',
-           'sender' => 'TQNEE',
+           'mobile' => '',
+           'password' => '',
+           'sender' => '',
            'numbers' => $phone,
            'msg' => 'كود التأكيد الخاص بك في كاش بوينت هو :' . $code,
 
